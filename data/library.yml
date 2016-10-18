@@ -1,0 +1,124 @@
+---
+:authors:
+- &1 !ruby/object:Author
+  name: J. Roaling
+  biography: Hi
+- &2 !ruby/object:Author
+  name: S. King
+  biography: Hello
+- &3 !ruby/object:Author
+  name: M. Molier
+  biography: Hello
+- &4 !ruby/object:Author
+  name: G. Martin
+  biography: Hello
+- &5 !ruby/object:Author
+  name: M. Tven
+  biography: Hello
+- !ruby/object:Author
+  name: F. Kafka
+  biography: Hello
+- &6 !ruby/object:Author
+  name: R. Somsmert
+  biography: Hello
+:books:
+- &8 !ruby/object:Book
+  title: Harry Potter I
+  author: *1
+- &10 !ruby/object:Book
+  title: Harry Potter II
+  author: *1
+- &12 !ruby/object:Book
+  title: Harry Potter III
+  author: *1
+- &14 !ruby/object:Book
+  title: Dark Tower
+  author: *2
+- &16 !ruby/object:Book
+  title: Mizo
+  author: *3
+- &17 !ruby/object:Book
+  title: Game of thrones I
+  author: *4
+- !ruby/object:Book
+  title: Tom Sawyer
+  author: *5
+- !ruby/object:Book
+  title: All about us
+  author: *6
+:readers:
+- &7 !ruby/object:Reader
+  name: Denis
+  email: dzem@gmail.com
+  city: Dnipro
+  street: GS
+  house: 140
+- &11 !ruby/object:Reader
+  name: Test
+  email: test@gmail.com
+  city: Kiev
+  street: KM
+  house: 101
+- &13 !ruby/object:Reader
+  name: Testovskiy
+  email: testovskiy@gmail.com
+  city: Uzhgorod
+  street: KL
+  house: 22
+- &15 !ruby/object:Reader
+  name: Testarius
+  email: testarius@gmail.com
+  city: Odessa
+  street: BH
+  house: 71
+- &9 !ruby/object:Reader
+  name: Testevich
+  email: testarich@gmail.com
+  city: Kharkiv
+  street: YM
+  house: 41
+:orders:
+- !ruby/object:Order
+  reader: *7
+  book: *8
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *9
+  book: *10
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *11
+  book: *12
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *13
+  book: *14
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *15
+  book: *16
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *9
+  book: *17
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *9
+  book: *14
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *7
+  book: *14
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *15
+  book: *14
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *13
+  book: *12
+  date: 2016-10-18
+- !ruby/object:Order
+  reader: *11
+  book: *10
+  date: 2016-10-18
