@@ -22,22 +22,22 @@
   name: R. Somsmert
   biography: Hello
 :books:
-- &8 !ruby/object:Book
+- !ruby/object:Book
   title: Harry Potter I
   author: *1
-- &10 !ruby/object:Book
+- &8 !ruby/object:Book
   title: Harry Potter II
   author: *1
-- &12 !ruby/object:Book
+- &10 !ruby/object:Book
   title: Harry Potter III
   author: *1
-- &14 !ruby/object:Book
+- &12 !ruby/object:Book
   title: Dark Tower
   author: *2
-- &16 !ruby/object:Book
+- &14 !ruby/object:Book
   title: Mizo
   author: *3
-- &17 !ruby/object:Book
+- &15 !ruby/object:Book
   title: Game of thrones I
   author: *4
 - !ruby/object:Book
@@ -47,31 +47,31 @@
   title: All about us
   author: *6
 :readers:
-- &7 !ruby/object:Reader
+- &16 !ruby/object:Reader
   name: Denis
   email: dzem@gmail.com
   city: Dnipro
   street: GS
   house: 140
-- &11 !ruby/object:Reader
+- &9 !ruby/object:Reader
   name: Test
   email: test@gmail.com
   city: Kiev
   street: KM
   house: 101
-- &13 !ruby/object:Reader
+- &11 !ruby/object:Reader
   name: Testovskiy
   email: testovskiy@gmail.com
   city: Uzhgorod
   street: KL
   house: 22
-- &15 !ruby/object:Reader
+- &13 !ruby/object:Reader
   name: Testarius
   email: testarius@gmail.com
   city: Odessa
   street: BH
   house: 71
-- &9 !ruby/object:Reader
+- &7 !ruby/object:Reader
   name: Testevich
   email: testarich@gmail.com
   city: Kharkiv
@@ -81,44 +81,40 @@
 - !ruby/object:Order
   reader: *7
   book: *8
-  date: 2016-10-18
+  date: 2016-10-19
 - !ruby/object:Order
   reader: *9
   book: *10
-  date: 2016-10-18
+  date: 2016-10-19
 - !ruby/object:Order
   reader: *11
   book: *12
-  date: 2016-10-18
+  date: 2016-10-19
 - !ruby/object:Order
   reader: *13
   book: *14
-  date: 2016-10-18
-- !ruby/object:Order
-  reader: *15
-  book: *16
-  date: 2016-10-18
-- !ruby/object:Order
-  reader: *9
-  book: *17
-  date: 2016-10-18
-- !ruby/object:Order
-  reader: *9
-  book: *14
-  date: 2016-10-18
+  date: 2016-10-19
 - !ruby/object:Order
   reader: *7
-  book: *14
-  date: 2016-10-18
+  book: *15
+  date: 2016-10-19
 - !ruby/object:Order
-  reader: *15
-  book: *14
-  date: 2016-10-18
+  reader: *7
+  book: *12
+  date: 2016-10-19
+- !ruby/object:Order
+  reader: *16
+  book: *12
+  date: 2016-10-19
 - !ruby/object:Order
   reader: *13
   book: *12
-  date: 2016-10-18
+  date: 2016-10-19
 - !ruby/object:Order
   reader: *11
   book: *10
-  date: 2016-10-18
+  date: 2016-10-19
+- !ruby/object:Order
+  reader: *9
+  book: *8
+  date: 2016-10-19
