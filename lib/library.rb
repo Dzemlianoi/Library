@@ -13,13 +13,13 @@ class Library
     items.each do |item|
       case item
         when Book
-          @books.push(item) if !@books.include?(item) && @authors.include?(item.author)
+          books.push(item) if !books.include?(item) && authors.include?(item.author)
         when Order
-          @orders.push(item) if @readers.include?(item.reader) && @books.include?(item.book)
+          orders.push(item) if readers.include?(item.reader) && books.include?(item.book)
         when Reader
-          @readers.push(item) unless @readers.include?(item)
+          readers.push(item) unless readers.include?(item)
         when Author
-          @authors.push(item) unless @authors.include?(item)
+          authors.push(item) unless authors.include?(item)
         else
           raise 'Undefined element'
       end
@@ -50,7 +50,7 @@ class Library
   private
 
   def grouping_by(flag)
-    @orders.group_by do |order|
+    orders.group_by do |order|
       order.public_send(flag)
     end
   end
