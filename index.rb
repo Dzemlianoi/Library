@@ -46,19 +46,8 @@ order9 = Order.new(library.readers[2], library.books[2])
 order10 = Order.new(library.readers[1], library.books[1])
 order11 = Order.new(library.readers[4], library.books[3])
 
-library.add(order1, order2, order3, order4, order5, order6, order7, order8, order9, order10)
-
 library.save('library')
 
 puts library.top_reader.name
 puts library.top_book.title
-puts library.top_books_statistics(3)
-
-# puts 'Books -------------------'
-# puts library.books.inspect
-# puts 'Authors -----------------'
-# puts library.authors.inspect
-# puts 'Readers -----------------'
-# puts library.readers.inspect
-# puts 'Orders ------------------'
-# puts library.orders.inspect
+puts library.top_books_statistics(12)

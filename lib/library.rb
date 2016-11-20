@@ -9,7 +9,7 @@ class Library
     @orders = []
   end
 
-  def add(*items)
+  def add(name, *items, username)
     items.each do |item|
       case item
         when Book
@@ -27,42 +27,22 @@ class Library
   end
 
   def top_reader
-    top_of(:reader).first
+    sort_by(:reader).first
   end
 
   def top_book
-    top_of(:book).first
+    sort_by(:book).first
   end
 
   def top_books_statistics(number)
-    raise 'Annormal quantity of books' if number > top_of(:book).count
-    top_books_readers = []
-    first_n_books = top_of(:book).first(number)
-    groups_by_book = grouping_by(:book)
-    first_n_books.each do |book|
-      groups_by_book[book].each do |order|
-        top_books_readers.push(order.reader)
-      end
-    end
-    top_books_readers.uniq.size
+    raise 'Annormal quantity of books' if number > orders.count
+    top_n_books = sort_by(:book, number)
+    top_n_books.map{|(_,orders)| orders}.flatten.map(&:reader).uniq.count
   end
 
   private
 
-  def grouping_by(flag)
-    orders.group_by do |order|
-      order.public_send(flag)
-    end
-  end
-
-  def sort_grouped(data)
-    sorted = data.sort_by { |_, v| v.size }
-    sorted.reverse.to_h
-  end
-
-  def top_of(flag)
-    grouped_orders = grouping_by(flag)
-    sorted_orders = sort_grouped(grouped_orders)
-    sorted_orders.keys
+  def sort_by(by, quantity = nil)
+    orders.group_by(&by).max_by(quantity){|_, orders| orders.count}
   end
 end
